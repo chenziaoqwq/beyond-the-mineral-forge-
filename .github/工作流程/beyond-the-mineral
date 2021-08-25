@@ -34,36 +34,38 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-- 名称：安装 Java JDK
-  用途：actions/setup-java@v2.3.0
-  与：
-    # 要设置的 Java 版本。需要一个完整的或 semver Java 版本。查看 README 文件中支持的语法示例
-    java版本： 
-    # Java 发行版。在 README 文件中查看支持的发行版列表
-    分布： 
-    # 包类型（jdk、jre、jdk+fx、jre+fx）
-    java-package: # 可选，默认为 jdk
-    # 包的架构
-    架构：# 可选，默认为 x64
-    # 压缩后的JDK所在路径
-    jdkFile: # 可选
-    # 如果您希望操作检查满足版本规范的最新可用版本，请设置此选项
-    检查最新：# 可选
-    # pom.xml 文件中的 distributionManagement 存储库的 ID。默认为`github`
-    server-id: # 可选，默认为 github
-    # 用于对 Apache Maven 存储库进行身份验证的用户名的环境变量名称。默认为 $GITHUB_ACTOR
-    server-username: # 可选，默认为 GITHUB_ACTOR
-    # 用于对 Apache Maven 存储库进行身份验证的密码或令牌的环境变量名称。默认为 $GITHUB_TOKEN
-    server-password: # 可选，默认为 GITHUB_TOKEN
-    # 将写入 settings.xml 文件的路径。默认值为 ~/.m2。
-    设置路径：#可选
-    # 覆盖settings.xml 文件（如果存在）。默认值为“真”。
-    覆盖设置：# 可选，默认为 true
-    # 要导入的 GPG 私钥。默认为空字符串。
-    gpg-private-key: # 可选
-    # GPG 私钥密码的环境变量名称。默认值为 $GPG_PASSPHRASE。
-    gpg-passphrase: # 可选
-    # 用于缓存依赖项的构建平台的名称。它可以是“maven”或“gradle”。
-    缓存：# 可选
-    # 将作业状态传递到发布作业步骤的解决方法。此变量不适用于手动设置
-    作业状态：# 可选，默认为 ${{ job.status }}
+- name: Java JDK installation
+Purpose: the actions/setup-java@v2.3.0
+And:
+# to set up the Java version. Need a complete or semver Java version. To view the README file support syntax examples
+Java v1ersion:16.0.2
+# Java release. In the file view support distribution list
+Distribution:
+# package type (JDK and jre, JDK + fx, jre + fx)
+Java - package: # optional, default to the JDK
+# package of architecture
+Original: # optional, x64 on by default
+# of compressed the JDK's path
+JdkFile: # option
+# if you want to operate in conformity with the latest version of the standard version, please set this option
+Look at the latest: # option
+# pom. XML files distributionManagement repository ID. The default for ` making `
+Server - id: # option, the default is dead simple
+# for Apache Maven repository to authenticate the user name of the environment variable name. The default is $GITHUB_ACTOR
+Server - the username: # optional, default to GITHUB_ACTOR
+# for the Apache Maven repository for authentication password or token environment variable name. The default is $GITHUB_TOKEN
+Server - password: # optional, default to GITHUB_TOKEN
+# will write Settings. The path of the XML file. The default value is ~ / m2.
+Set the path: # option
+# override Settings. The XML file (if any). The default value is "true".
+Override Settings: # option, the default is true
+# to import GPG module. The default is empty string.
+GPG -- private key: # option
+In the name of the environment variable # GPG module code. The default value is $GPG_PASSPHRASE.
+GPG - password: # option
+# used for the name of the build platform dependencies. It can be "maven" or "gradle.
+View: # option
+# job status could be dynamically transferred to publish job step solution.
+Job status: # option, the default value is ${{job. Status}}
+© 2021 GitHu
+
